@@ -1,27 +1,24 @@
 from sklearn.model_selection import train_test_split
 from sklearn.ensemble import RandomForestRegressor
 from sklearn.metrics import mean_absolute_error
-import os
-import feature as ft
+import pandas as pd
 
-pasta = os.getcwd()
-X = ft.X
-Y = ft.y
+class Modelo():
+    def __init__(self):
+        self.modelo = RandomForestRegressor(n_estimators=200, random_state=42)
 
-X_train, X_test, y_train, y_test = train_test_split(
-    X, Y, test_size=0.2, shuffle=False
-)
+    def train(self, df:pd.DataFrame):
+        X = df[["mes", "media_movel_3", "media_movel_6", "lag_1", "lag_3"]]
+        y = df["taxa_de_desemprego"]
 
-modelo = RandomForestRegressor(n_estimators=200,random_state=42)
+        X_train, X_test, y_train, y_test = train_test_split(
+            X, y, test_size=0.2, shuffle=False
+        )
 
-modelo.fit(X_train, y_train)
-y_pred = modelo.predict(X_test)
-mae = mean_absolute_error(y_test, y_pred)
+        self.modelo.fit(X_train, y_train)
+        y_pred = self.modelo.predict(X_test)
+        mae = mean_absolute_error(y_test, y_pred)
 
-print(f"MAE: {mae:.2f}")
 
-resultado = ft.df.loc[X_test.index].copy()
-resultado["previsao"] = y_pred
-resultado["erro"] = resultado["taxa_de_desemprego"] - resultado["previsao"]
-print(resultado)
-resultado.to_csv(os.path.join(pasta, r"pipeline de dados\data\output\previsao_desemprego"))
+        return X_test.index, y_pred, mae
+        
