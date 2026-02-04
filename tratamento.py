@@ -11,5 +11,3 @@ df["ano"]= df["periodo"].dt.year
 df["mes"] = df["periodo"].dt.month
 arquivo_csv = os.path.join(ingestao.pasta, "processed\desemprego_tratado.csv")
 df.to_csv(arquivo_csv, index=False)
-
-print(df.head())

@@ -19,5 +19,4 @@ df.to_csv(arquivo_csv, index=False)
 
 arquivo_json = json.dumps(serie, indent=1, ensure_ascii=False)
 
-print(df.head())
 
