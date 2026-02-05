@@ -24,7 +24,7 @@ def main():
     resultado["previsao"] = previsoes
     resultado["erro"] = resultado["taxa_de_desemprego"] - resultado["previsao"]
 
-    resultado.to_csv(r"data\output\previsao_desemprego.csv", index=False)
+    resultado.to_csv("previsao_desemprego.csv", index=False)
 
 if __name__ == "__main__":
     main()
