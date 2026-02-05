@@ -1,3 +1,4 @@
+import os
 from ingestao import IBGEClient
 from tratamento import Tratamento
 from feature import FeatureEngineer
@@ -24,7 +25,8 @@ def main():
     resultado["previsao"] = previsoes
     resultado["erro"] = resultado["taxa_de_desemprego"] - resultado["previsao"]
 
-    resultado.to_csv("previsao_desemprego.csv", index=False)
+    os.makedirs("data/output", exist_ok=True)
+    resultado.to_csv("data/output/previsao_desemprego.csv", index=False)
 
 if __name__ == "__main__":
     main()
