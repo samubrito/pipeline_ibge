@@ -1,11 +1,11 @@
 from sklearn.model_selection import train_test_split
-from sklearn.ensemble import RandomForestRegressor
+from sklearn.linear_model import LinearRegression
 from sklearn.metrics import mean_absolute_error
 import pandas as pd
 
 class Modelo():
     def __init__(self):
-        self.modelo = RandomForestRegressor(n_estimators=200, random_state=42)
+        self.modelo = LinearRegression()
 
     def train(self, df:pd.DataFrame):
         X = df[["mes", "media_movel_3", "media_movel_6", "lag_1", "lag_3"]]

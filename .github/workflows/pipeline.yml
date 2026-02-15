@@ -2,7 +2,7 @@ name: Atualiza pipeline IBGE
 
 on:
   schedule:
-    - cron: '*/5 * * * *'
+    - cron: '0 9 * * 1'
   workflow_dispatch:
 
 permissions:
