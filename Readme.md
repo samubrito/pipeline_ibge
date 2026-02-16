@@ -71,6 +71,7 @@ A solução foi desenhada para ser resiliente e independente de intervenção hu
  ├── 🐍 modelo.py              # Script de treinamento do modelo preditivo
  ├── 🚀 main.py                # Ponto de entrada (Orquestrador do fluxo)
  └── 📋 requirements.txt       # Lista de dependências do ambiente
+```
 
 <h2 id="detalhes">4. Detalhes da Implementação ⚙️</h2>
 
