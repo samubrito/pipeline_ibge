@@ -56,17 +56,21 @@ A solução foi desenhada para ser resiliente e independente de intervenção hu
 
 <h2 id="estrutura">3. Estrutura do Projeto 📂</h2>
 
-Plaintext
-├── .github/workflows/
-│   └── main.yml            # Configuração do GitHub Actions
-├── data/output/
-│   └── previsao_desemprego.csv # Resultado final consumido pelo Power BI
-├── ingestao.py             # Classe de consumo da API
-├── tratamento.py          # Limpeza e normalização
-├── feature.py             # Engenharia de variáveis temporais
-├── modelo.py              # Treinamento e métricas do modelo
-├── main.py                # Orquestrador do fluxo Python
-└── requirements.txt       # Dependências do projeto
+### 🏗️ Estrutura do Projeto
+
+```plaintext
+📦 supply-chain-analytics
+ ├── 📂 .github/workflows
+ │   └── ⚙️ main.yml            # Pipeline de CI/CD (GitHub Actions)
+ ├── 📂 data
+ │   └── 📂 output
+ │       └── 📊 previsao_desemprego.csv  # Dataset processado para o Power BI
+ ├── 🐍 ingestao.py            # Módulo de extração de dados via API
+ ├── 🐍 tratamento.py          # Script de limpeza e Data Wrangling
+ ├── 🐍 feature.py             # Engenharia de variáveis temporais
+ ├── 🐍 modelo.py              # Script de treinamento do modelo preditivo
+ ├── 🚀 main.py                # Ponto de entrada (Orquestrador do fluxo)
+ └── 📋 requirements.txt       # Lista de dependências do ambiente
 
 <h2 id="detalhes">4. Detalhes da Implementação ⚙️</h2>
 
