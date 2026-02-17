@@ -5,7 +5,7 @@ from feature import FeatureEngineer
 from modelo import Modelo
 
 def main():
-    link = "https://servicodados.ibge.gov.br/api/v3/agregados/4099/periodos/all/variaveis/4099?localidades=N1[all]"
+    link = "https://servicodados.ibge.gov.br/api/v3/agregados/6381/periodos/all/variaveis/4099?localidades=N1[all]"
 
     cliente = IBGEClient(link)
     df_raw = cliente.busca_base()
@@ -25,8 +25,8 @@ def main():
     resultado["previsao"] = previsoes
     resultado["erro"] = resultado["taxa_de_desemprego"] - resultado["previsao"]
 
-    os.makedirs("data/output", exist_ok=True)
-    resultado.to_csv("data/output/previsao_desemprego.csv", index=False)
+    os.makedirs("pipeline de dados/data/output", exist_ok=True)
+    resultado.to_csv("pipeline de dados/data/output/previsao_desemprego.csv", index=False)
 
 if __name__ == "__main__":
     main()

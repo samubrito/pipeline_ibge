@@ -56,8 +56,6 @@ A solução foi desenhada para ser resiliente e independente de intervenção hu
 
 <h2 id="estrutura">3. Estrutura do Projeto 📂</h2>
 
-### 🏗️ Estrutura do Projeto
-
 ```plaintext
 📦 supply-chain-analytics
  ├── 📂 .github/workflows
@@ -76,10 +74,10 @@ A solução foi desenhada para ser resiliente e independente de intervenção hu
 <h2 id="detalhes">4. Detalhes da Implementação ⚙️</h2>
 
 <h3 id="features">4.1. Engenharia de Atributos (Features)<h3>
-Para capturar a sazonalidade e a tendência do desemprego, foram criadas:
+
+<h4>Para capturar a sazonalidade e a tendência do desemprego, foram criadas:</h4>
 
 Médias Móveis (3 e 6 meses): Suavizam ruídos e mostram a tendência de curto/médio prazo.
-
 Lags (1 e 3 meses): Permitem que o modelo entenda o valor imediatamente anterior (autocorrelação).
 
 <h3 id="modelagem">4.2. O Modelo de Machine Learning</h3>
