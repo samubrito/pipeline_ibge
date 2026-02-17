@@ -25,8 +25,8 @@ def main():
     resultado["previsao"] = previsoes
     resultado["erro"] = resultado["taxa_de_desemprego"] - resultado["previsao"]
 
-    os.makedirs("pipeline de dados/data/output", exist_ok=True)
-    resultado.to_csv("pipeline de dados/data/output/previsao_desemprego.csv", index=False)
+    os.makedirs("data/output", exist_ok=True)
+    resultado.to_csv("data/output/previsao_desemprego.csv", index=False)
 
 if __name__ == "__main__":
     main()
