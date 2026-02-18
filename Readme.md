@@ -1,14 +1,6 @@
 <h1>IBGE Unemployment Pipeline: ETL & Predictive Modeling</h1>
 <p align="center">
   <img src="imagens/pipeline_ibge.png" alt="IBGE Unemployment Pipeline: ETL & Predictive Modeling" width="400px">
-  <iframe 
-    title="IBGE Unemployment Analytics" 
-    width="1140" 
-    height="541.25" 
-    src="https://app.powerbi.com/view?r=eyJrIjoiN2Y1NzJkZWItNTgyNy00NjJkLWIyZjMtOThlZTBkZjk0ODVhIiwidCI6ImE4NWNjYzY2LTZjN2EtNDVkZi04NjY1LTg5ZWJhNWRmOWRmNSJ9" 
-    frameborder="0" 
-    allowFullScreen="true">
-</iframe>
 </p>
 <p>Este projeto estabelece um fluxo de dados completo (End-to-End) que monitora, processa e prevê a Taxa de Desocupação no Brasil utilizando dados oficiais da API do IBGE (PNAD Contínua). A solução é 100% automatizada, rodando em nuvem e servindo dados tratados para um dashboard executivo no Power BI.</p>
 
