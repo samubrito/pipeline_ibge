@@ -94,7 +94,7 @@ O arquivo final será gerado em data/output/previsao_desemprego.csv, contendo as
 
 <h2 id="power_bi">5. Análise e Visualização</h2>
 <p align="center">
-  <img src="imagens/power_bi.png" alt="Power BI" width="400px">
+  <img src="imagens/power_bi.PNG" alt="Power BI" width="400px">
 </p>
 <p>O dashboard integrado atua como a camada de monitoramento do modelo, permitindo a validação estatística das previsões frente aos dados reais coletados da API.</p>
 <h3>Métricas de Performance do Modelo</h3>
